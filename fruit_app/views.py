@@ -3,7 +3,7 @@ from django.http import JsonResponse
 def send_fruits(request):
    fruits =[
       {
-        "name": "Apple",
+        "name": "Apfel",
         "gewicht": 0.30,
         "farbe": "rot",
         },
@@ -16,8 +16,18 @@ def send_fruits(request):
         "name": "Orange",
         "gewicht": 0.25,
         "farbe": "orange",
+        },
+         {
+        "name": "birne",
+        "gewicht": 0.25,
+        "farbe": "grün",
+        },
+         {
+        "name": "kiwi",
+        "gewicht": 0.25,
+        "farbe": "braun",
         }
       
    ]
-   
-   return JsonResponse(fruits, safe=False)
+
+   return JsonResponse(fruits)
