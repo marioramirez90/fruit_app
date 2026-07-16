@@ -30,4 +30,4 @@ def send_fruits(request):
       
    ]
 
-   return JsonResponse(fruits)
+   return JsonResponse({"fruits": fruits}) 
