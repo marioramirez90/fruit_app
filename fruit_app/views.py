@@ -1,5 +1,4 @@
-from django.shortcuts import render
-
+from django.http import JsonResponse
 # Create your views here.
 def send_fruits(request):
    fruits =[
@@ -17,8 +16,8 @@ def send_fruits(request):
         "name": "Orange",
         "gewicht": 0.25,
         "farbe": "orange",
-        },
-        {
-        
-      }
+        }
+      
    ]
+   
+   return JsonResponse(fruits, safe=False)
